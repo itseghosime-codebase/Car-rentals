@@ -17,7 +17,7 @@ export default function GridSection(props: GridSectionProps) {
                 <div className={`space-y-4 ${props.reverse ? 'order-2' : 'order-1'}`}>
                     <h4 className='text-5xl font-semibold tracking-tight'>{props.heading}</h4>
                     <p className='text-xl'>{props.description}</p>
-                    <Link href={''}
+                    <Link href={'/contact'}
                         className='inline-block text-center bg-[#32CD32] py-3 px-7 max-w-sm w-full md:max-w-[230px] text-xl text-black font-medium rounded-lg'
                     >
                         Rent a car

@@ -29,7 +29,7 @@ export default function DoorDash() {
                     </p>
                 </BlurFade>
                 <BlurFade delay={0.35} inView>
-                    <Link href={''}
+                    <Link href={'/contact'}
                         className='inline-block text-center bg-[#32CD32] py-3 px-7 max-w-sm w-full md:max-w-[230px] text-xl text-black font-medium rounded-lg'
                     >
                         Rent a car

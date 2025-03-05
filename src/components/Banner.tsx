@@ -27,7 +27,7 @@ export default function Banner() {
                     Whether it’s a weekend getaway or a business trip, we’ve got you covered.
                 </TextAnimate>
                 <BlurFade inView>
-                    <Link href={''}
+                    <Link href={'/contact'}
                         className='inline-block bg-[#32CD32] py-3 px-10 max-w-sm w-full md:max-w-[250px] text-lg lg:text-xl text-black font-medium rounded-lg'
                     >
                         Rent a car

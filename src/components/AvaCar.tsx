@@ -19,7 +19,7 @@ export default function AvaCar(props: AvailableCarsProps) {
             <div className={`flex items-center ${props.home ? 'justify-center md:justify-between' : 'justify-center'}`}>
                 <h2 className='text-3xl md:text-4xl lg:text-5xl font-medium '>Available cars </h2>
                 {
-                    props.home ? <Link href={''} className='bg-[#32CD32] hidden md:inline-block text-lg py-2.5 lg:py-3 max-w-52 w-full text-center rounded-lg font-medium text-black'>
+                    props.home ? <Link href={'/rent'} className='bg-[#32CD32] hidden md:inline-block text-lg py-2.5 lg:py-3 max-w-52 w-full text-center rounded-lg font-medium text-black'>
                         See all cars</Link> : ''
                 }
             </div>
@@ -37,7 +37,7 @@ export default function AvaCar(props: AvailableCarsProps) {
                 }
             </div>
             {
-                props.home ? <Link href={''} className='bg-[#32CD32] md:hidden text-lg py-3 w-full inline-block text-center rounded-lg font-medium text-black'>
+                props.home ? <Link href={'/rent'} className='bg-[#32CD32] md:hidden text-lg py-3 w-full inline-block text-center rounded-lg font-medium text-black'>
                     See all cars</Link> : ''
             }
         </section>
