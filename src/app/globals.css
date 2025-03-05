@@ -1,0 +1,10 @@
+@import "tailwindcss" important;
+/* @plugin "tailwindcss-animate"; */
+/* @custom-variant dark (&:is(.dark *)); */
+
+body {
+  background: #1B1B1B;
+  color: #ffffff;
+  font-family: 'Poppins', 'Poppins Fallback';
+}
+
