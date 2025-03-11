@@ -3,7 +3,7 @@
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { z } from "zod"
-
+import Logo from '@/assets/logo-white.svg'
 import { Button } from "@/components/ui/button"
 import {
     Form,
@@ -17,6 +17,7 @@ import React from 'react'
 import { Input } from "@/components/ui/input"
 import Image from "next/image"
 import Bg from './../../assets/contact-bg.png';
+import Link from "next/link"
 
 const formSchema = z.object({
     firstname: z.string().min(2, {
@@ -30,6 +31,7 @@ const formSchema = z.object({
 })
 
 export default function page() {
+    const [mailed, setMailed] = React.useState<boolean>(true)
     const form = useForm<z.infer<typeof formSchema>>({
         resolver: zodResolver(formSchema),
         defaultValues: {
@@ -123,6 +125,28 @@ export default function page() {
                     </div>
                 </div>
             </section>
+            {
+                mailed && (
+                    <div className="fixed inset-0 px-6 bg-black/80 backdrop-blur-2xl z-50 flex items-center justify-center">
+                        <div className="max-w-lg border-[0.5px] border-[#32CD32] px-6 py-10 text-center flex items-center justify-center gap-5 flex-col">
+                           <Image 
+                            src={Logo}
+                            alt='Logo'
+                            sizes='100%'
+                            className='h-16'
+                           />
+                            <p className='text-lg'>A member of our team will reach out to you for more
+                                details and information! Thank for choosing us for
+                                all your rental car needs</p>
+                            <Link href={'/'}
+                                className='inline-block bg-[#32CD32] py-3 px-10 max-w-sm w-full md:max-w-[250px] text-lg text-black font-medium rounded-lg'
+                            >
+                                Back to home
+                            </Link>
+                        </div>
+                    </div>
+                )
+            }
         </main>
     )
 }

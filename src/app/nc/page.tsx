@@ -6,7 +6,7 @@ import Rental from '@/components/Rental'
 export default function page() {
     return (
         <main>
-            <Rental title='Rent cars' />
+            <Rental title='North Carolina'/>
             <AvaCar cars={AvailableCars} home={false} />
         </main>
     )
