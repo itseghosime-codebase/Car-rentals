@@ -18,6 +18,7 @@ import { Input } from "@/components/ui/input"
 import Image from "next/image"
 import Bg from './../../assets/contact-bg.png';
 import Link from "next/link"
+import { Loader2 } from "lucide-react"
 
 const formSchema = z.object({
     firstname: z.string().min(2, {
@@ -31,7 +32,8 @@ const formSchema = z.object({
 })
 
 export default function page() {
-    const [mailed, setMailed] = React.useState<boolean>(true)
+    const [mailed, setMailed] = React.useState<boolean>(false)
+    const [loading, setLoading] = React.useState<boolean>(false)
     const form = useForm<z.infer<typeof formSchema>>({
         resolver: zodResolver(formSchema),
         defaultValues: {
@@ -46,7 +48,12 @@ export default function page() {
     function onSubmit(values: z.infer<typeof formSchema>) {
         // Do something with the form values.
         // ✅ This will be type-safe and validated.
-        console.log(values)
+        console.log(values);
+        setLoading(true)
+        setTimeout(() => {
+            setLoading(false)
+            setMailed(!mailed)
+        }, 2500)
     }
 
     return (
@@ -64,7 +71,7 @@ export default function page() {
                                         <FormItem>
                                             <FormLabel>First name</FormLabel>
                                             <FormControl>
-                                                <Input {...field} />
+                                                <Input {...field} placeholder="Felix"/>
                                             </FormControl>
                                             <FormMessage />
                                         </FormItem>
@@ -77,7 +84,7 @@ export default function page() {
                                         <FormItem>
                                             <FormLabel>Last name</FormLabel>
                                             <FormControl>
-                                                <Input {...field} />
+                                                <Input {...field} placeholder="Brown"/>
                                             </FormControl>
                                             <FormMessage />
                                         </FormItem>
@@ -90,7 +97,7 @@ export default function page() {
                                         <FormItem>
                                             <FormLabel>Email</FormLabel>
                                             <FormControl>
-                                                <Input {...field} />
+                                                <Input {...field} placeholder="mail@example.com"/>
                                             </FormControl>
                                             <FormMessage />
                                         </FormItem>
@@ -103,14 +110,22 @@ export default function page() {
                                         <FormItem>
                                             <FormLabel>Phone</FormLabel>
                                             <FormControl>
-                                                <Input {...field} />
+                                                <Input {...field} placeholder="+1 234 567 89" />
                                             </FormControl>
                                             <FormMessage />
                                         </FormItem>
                                     )}
                                 />
-                                <Button type="submit" className="bg-[#32CD32] py-3 block w-full h-fit text-lg md:text-xl text-[#1A1A1A] font-semibold">
-                                    Submit Details
+                                <Button
+                                    type="submit"
+                                    disabled={loading}
+                                    className="bg-[#32CD32] py-3 block w-full h-fit text-lg md:text-xl text-[#1A1A1A] font-semibold">
+                                    {
+                                        loading ?
+                                            <span className="flex items-center justify-center gap-3">
+                                                <Loader2 className="animate-spin" />Please wait
+                                            </span> : 'Submit Details'
+                                    }
                                 </Button>
                             </form>
                         </Form>
@@ -129,12 +144,12 @@ export default function page() {
                 mailed && (
                     <div className="fixed inset-0 px-6 bg-black/80 backdrop-blur-2xl z-50 flex items-center justify-center">
                         <div className="max-w-lg border-[0.5px] border-[#32CD32] px-6 py-10 text-center flex items-center justify-center gap-5 flex-col">
-                           <Image 
-                            src={Logo}
-                            alt='Logo'
-                            sizes='100%'
-                            className='h-16'
-                           />
+                            <Image
+                                src={Logo}
+                                alt='Logo'
+                                sizes='100%'
+                                className='h-16'
+                            />
                             <p className='text-lg'>A member of our team will reach out to you for more
                                 details and information! Thank for choosing us for
                                 all your rental car needs</p>
