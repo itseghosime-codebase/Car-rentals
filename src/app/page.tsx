@@ -8,6 +8,12 @@ import Lambo from './../assets/cars/lambo.png';
 import CarImage from './../assets/cars/one.png';
 import Footer from "@/components/Footer";
 import Carousel from "@/components/Carousel";
+import Sonic from './../assets/cars/Chevy-Sonic-LT.png'
+import Ford from './../assets/cars/Ford-Fusion.png';
+import Mitsubishi from './../assets/cars/Mitsubishi.png';
+import Sentra from './../assets/cars/Nissan-Sentra.png';
+import Versa from './../assets/cars/Nissan-Versa-Note.png';
+
 
 export default function Home() {
   return (
@@ -51,52 +57,33 @@ const BottomSection = [
 
 export const AvailableCars = [
   {
-    img: CarImage,
-    carType: 'Nissan Sentra SV',
+    img: Mitsubishi,
+    carType: 'Mitsubishi Mirage',
     carDescription: '$60 Daily / $360 Weekly'
   },
   {
-    img: CarImage,
-    carType: 'Nissan Sentra SV',
+    img: Sentra,
+    carType: 'Nissan Versa Note',
     carDescription: '$60 Daily / $360 Weekly'
   },
   {
-    img: CarImage,
-    carType: 'Nissan Sentra SV',
+    img: Versa,
+    carType: 'Nissan Sentra',
     carDescription: '$60 Daily / $360 Weekly'
   },
   {
-    img: CarImage,
-    carType: 'Nissan Sentra SV',
+    img: Ford,
+    carType: 'Ford Fusion',
     carDescription: '$60 Daily / $360 Weekly'
   },
   {
-    img: CarImage,
-    carType: 'Nissan Sentra SV',
+    img: Sonic,
+    carType: 'Chevy Sonic LT',
     carDescription: '$60 Daily / $360 Weekly'
   },
   {
-    img: CarImage,
-    carType: 'Nissan Sentra SV',
+    img: Sentra,
+    carType: 'Nissan Sentra',
     carDescription: '$60 Daily / $360 Weekly'
-  },
-  {
-    img: CarImage,
-    carType: 'Nissan Sentra SV',
-    carDescription: '$60 Daily / $360 Weekly'
-  },
-  {
-    img: CarImage,
-    carType: 'Nissan Sentra SV',
-    carDescription: '$60 Daily / $360 Weekly'
-  },
-  {
-    img: CarImage,
-    carType: 'Nissan Sentra SV',
-    carDescription: '$60 Daily / $360 Weekly'
-  }, {
-    img: CarImage,
-    carType: 'Nissan Sentra SV',
-    carDescription: '$60 Daily / $360 Weekly'
-  },
+  }
 ]

@@ -16,16 +16,16 @@ export default function DoorDash() {
             />
             <div className="relative z-10 flex items-start justify-center flex-col gap-5">
                 <BlurFade inView>
-                    <h1 className='text-4xl md:text-6xl lg:text-7xl font-semibold max-w-4xl '>
-                        Do you need a car <br />
-                        for Door dashing?
+                    <h1 className='text-4xl md:text-6xl lg:text-7xl font-semibold max-w-5xl '>
+                        Need a Car for Rideshare
+                        or Food Delivery?
                     </h1>
                 </BlurFade>
                 <BlurFade delay={0.25} inView>
                     <p className='max-w-2xl lg:max-w-4xl text-lg lg:text-2xl'>
-                        Want to start DoorDashing but don’t have a car? No problem! With our
-                        easy rental options, you can get on the road fast and start earning
-                        money without the hassle of owning a vehicle.
+                        No car? No problem! At GET N GO, we offer affordable, road-ready rentals for gig
+                        workers. Get fast approval, flexible terms, and insured vehicles—so you can
+                        start earning today.
                     </p>
                 </BlurFade>
                 <BlurFade delay={0.35} inView>

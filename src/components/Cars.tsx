@@ -22,7 +22,7 @@ export default function Cars(prop: CarProp) {
                 />
             </div>
             <h4 className={prop.home ? 'text-3xl' : 'text-2xl'}>{prop.type}</h4>
-            <p className={prop.home ? 'text-lg' : 'text-base'}>{prop.description}</p>
+            <p className={prop.home ? 'text-lg hidden' : 'text-base hidden'}>{prop.description}</p>
             <Link href={'/contact'} className='bg-[#32CD32] py-2 px-10 inline-block rounded-lg text-lg text-black font-medium max-w-40 w-full'>Rent</Link>
         </div>
     )

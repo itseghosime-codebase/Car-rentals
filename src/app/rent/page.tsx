@@ -7,7 +7,7 @@ export default function page() {
     return (
         <main>
             <Rental title='Rent cars' />
-            <AvaCar cars={AvailableCars} home={false} />
+            <AvaCar cars={AvailableCars} home={true} />
         </main>
     )
 }

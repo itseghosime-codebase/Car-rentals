@@ -62,24 +62,24 @@ export default function Navbar() {
                     <li className='w-full lg:w-fit hidden lg:block'>
                         <DropdownMenu>
                             <DropdownMenuTrigger className='hover:text-[#32CD32] flex items-center justify-between md:justify-start gap-2 w-full'>
-                                <span className='text-lg '>Location</span>
+                                <span className='text-lg '>Texas</span>
                                 <IoIosArrowDown />
                             </DropdownMenuTrigger>
                             <DropdownMenuContent className="bg-[#1E1E1E] border-[#1e1e1e]/80 relative w-40 py-5">
 
                                 <DropdownMenuItem>
-                                    <Link className='hover:text-[#32CD32]' href="/tx" >
-                                        <span className='text-lg '>Texas</span>
+                                    <Link className='hover:text-[#32CD32]' href="/au" >
+                                        <span className='text-lg '>Austin</span>
                                     </Link>
                                 </DropdownMenuItem>
                                 <DropdownMenuItem>
-                                    <Link className='hover:text-[#32CD32]' href="/nc" >
-                                        <span className='text-lg '>North Carolina</span>
+                                    <Link className='hover:text-[#32CD32]' href="/sa" >
+                                        <span className='text-lg '>San Antonio</span>
                                     </Link>
                                 </DropdownMenuItem>
                                 <DropdownMenuItem>
-                                    <Link className='hover:text-[#32CD32]' href="/my" >
-                                        <span className='text-lg '>Maryland</span>
+                                    <Link className='hover:text-[#32CD32]' href="/ho" >
+                                        <span className='text-lg '>Houston</span>
                                     </Link>
                                 </DropdownMenuItem>
                             </DropdownMenuContent>
@@ -88,20 +88,18 @@ export default function Navbar() {
                     <li className='w-full lg:w-fit lg:hidden'>
                         <Accordion type="single" collapsible className="w-full">
                             <AccordionItem value="item-1">
-                                <AccordionTrigger className='p-0 w-full'>
-                                    <button className='hover:text-[#32CD32] p-0'>
-                                        <span className='text-lg '>Location</span>
-                                    </button>
+                                <AccordionTrigger className='w-full hover:text-[#32CD32] p-0'>
+                                    <span className='text-lg '>Texas</span>
                                 </AccordionTrigger>
                                 <AccordionContent className='pt-4 space-y-3 pl-3'>
-                                    <Link className='hover:text-[#32CD32] block' href="/tx">
-                                        <span className='text-lg '>Texas</span>
+                                    <Link className='hover:text-[#32CD32] block' href="/au">
+                                        <span className='text-lg '>Austin</span>
                                     </Link>
-                                    <Link className='hover:text-[#32CD32] block' href="/nc">
-                                        <span className='text-lg '>North Carolina</span>
+                                    <Link className='hover:text-[#32CD32] block' href="/sa">
+                                        <span className='text-lg '>San Antonio</span>
                                     </Link>
-                                    <Link className='hover:text-[#32CD32] block' href="/my">
-                                        <span className='text-lg '>Maryland</span>
+                                    <Link className='hover:text-[#32CD32] block' href="/ho">
+                                        <span className='text-lg '>Houston</span>
                                     </Link>
                                 </AccordionContent>
                             </AccordionItem>
