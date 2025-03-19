@@ -5,7 +5,7 @@ import GridSection from "@/components/GridSection";
 import Howitworks from "@/components/Howitworks";
 import Suv from './../assets/cars/SuvPic.png';
 import Lambo from './../assets/cars/lambo.png';
-import CarImage from './../assets/cars/one.png';
+import Hyundai from './../assets/cars/one.png';
 import Footer from "@/components/Footer";
 import Carousel from "@/components/Carousel";
 import Sonic from './../assets/cars/Chevy-Sonic-LT.png'
@@ -62,12 +62,12 @@ export const AvailableCars = [
     carDescription: '$60 Daily / $360 Weekly'
   },
   {
-    img: Sentra,
+    img: Versa,
     carType: 'Nissan Versa Note',
     carDescription: '$60 Daily / $360 Weekly'
   },
   {
-    img: Versa,
+    img: Sentra,
     carType: 'Nissan Sentra',
     carDescription: '$60 Daily / $360 Weekly'
   },
@@ -82,8 +82,8 @@ export const AvailableCars = [
     carDescription: '$60 Daily / $360 Weekly'
   },
   {
-    img: Sentra,
-    carType: 'Nissan Sentra',
+    img: Hyundai,
+    carType: 'Hyundai Elantra',
     carDescription: '$60 Daily / $360 Weekly'
   }
 ]
